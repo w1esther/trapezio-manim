@@ -72,17 +72,17 @@ class AreaTrapezio(MovingCameraScene):
 
         self.wait(2)
 
-        label_losango = MathTex(r'Losango')
-        label_losango.shift(3.2*UP + 2.5*RIGHT)
+        label_paralelogramo = MathTex(r'Paralelogramo')
+        label_paralelogramo.shift(3.2*UP + 2.5*RIGHT)
 
-        self.play(Transform(label_trapezio, label_losango))
+        self.play(Transform(label_trapezio, label_paralelogramo))
 
         self.wait(2)
 
-        label_area_losango = MathTex(r'AreaLosango')
-        label_area_losango.shift(1.5*DOWN + 2.5*RIGHT)
+        label_area_paralelogramo = MathTex(r'AreaParalelogramo')
+        label_area_paralelogramo.shift(1.5*DOWN + 2.5*RIGHT)
 
-        self.play(FadeIn(label_area_losango))
+        self.play(FadeIn(label_area_paralelogramo))
 
         self.wait(2)
 
@@ -99,6 +99,6 @@ class AreaTrapezio(MovingCameraScene):
         area_trapezio = MathTex(r'\frac {(B_{baseMaior} + b_{baseMenor}) \cdot h_{altura}}{2}')
         area_trapezio.shift(2.6*DOWN + 2.5*RIGHT)
 
-        self.play(Transform(label_area_losango, label_area_trapezio), Transform(area_losango, area_trapezio))
+        self.play(Transform(label_area_paralelogramo, label_area_trapezio), Transform(area_losango, area_trapezio))
 
         self.wait(2)
